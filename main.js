@@ -11,7 +11,7 @@ for (let i = 2; i < numbers.length; i++) {
     if (!removed.includes(prime)) {
       removed.push(prime);
       const index = numbers.indexOf(prime);
-      numbers.splice(index, 1);
+      if (index != -1) numbers.splice(index, 1);
     }
   }
 }
